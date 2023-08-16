@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Select the algorithm to predict </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <form>
+      <a href="{{ url_for('generate_logistic_bar_chart') }}" class="btn btn-primary btn-block btn-large">Logistic Regression</a>
+      <a href="{{ url_for('generate_k_means_bar_chart') }}" class="btn btn-primary btn-block btn-large">K-Means</a>
+      <a href="{{ url_for('generate_random_forest_chart') }}" class="btn btn-primary btn-block btn-large">Random Forest </a>
+      <a href="{{ url_for('generate_svm_chart') }}" class="btn btn-primary btn-block btn-large">Support Vector Machine</a>
+    </form>
+   <br>
+   <br>
+ </div>
+ <!--<img src="/static/images/Original.svg" style="width: 400px;position: absolute;bottom: 10px;left: 10px;" alt="Company Logo"/> -->
+
+</body>
+</html>
