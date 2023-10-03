@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="login">
+        <h1>Select the algorithm to predict</h1>
+        
+        <!-- Main Form for Receiving Query to our ML -->
+        <form action="{{ url_for('generate_pie_chart') }}" method="get">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Logistic Regression</button>
+        </form>
+
+        <form action="{{ url_for('generate_bar_chart') }}" method="get">
+            <button type="submit" class="btn btn-primary btn-block btn-large">K-Means</button>
+        </form>
+
+        <form action="{{ url_for('generate_bar_chart') }}" method="get">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Random Forest</button>
+        </form>
+
+        <form action="{{ url_for('generate_bar_chart') }}" method="get">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Support Vector Machine</button>
+        </form>
+
+        <form action="{{ url_for('generate_bar_chart') }}" method="get">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Decision Tree</button>
+        </form>
+
+        <br>
+        <br>
+        <!--{{ prediction_text }}-->
+    </div>
+</body>
+</html>
+	

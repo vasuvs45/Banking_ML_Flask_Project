@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download CSV Prompt</title>
+</head>
+<body>
+    <h1>Do you want to download CSV with employee details?</h1>
+    <button onclick="downloadCSV()">Yes</button>
+    <button onclick="cancel()">No</button>
+
+    <script>
+        function downloadCSV() {
+            // Sample employee data in CSV format
+            const csvData = "Name,Position,Salary\nJohn Doe,Manager,50000\nJane Smith,Developer,60000";
+
+            // Create a Blob object with the CSV data
+            const blob = new Blob([csvData], { type: 'text/csv' });
+
+            // Create a temporary anchor element to trigger the download
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'employee_details.csv';
+            a.click();
+        }
+
+        function cancel() {
+            alert("CSV download cancelled.");
+        }
+    </script>
+</body>
+</html>
